@@ -1,11 +1,17 @@
 # IHU_Lesson5_material
 
-Σε αυτό το μάθημα θα αναλύσουμε τη λειτουργία των Βάσεων Δεδομένων και συγκεκριμένα της SQLite.
+In this lesson we will analyse the DB functionality of Android, and especially the SQLite.
 
-Το σύστημά μας θα αλλάξει αρκετά, καθώς θα προστεθούν πολλές νέες κλάσεις που σχετίζονται με τη ΒΔ. Πρώτα θα ορίσουμε τους πίνακες της ΒΔ, έπειτα θα γράψουμε κώδικα για να δημιουργούνται μέσω Java και έπειτα θα κάνουμε δοκιμαστικές εισαγωγές και ελέγχους δεδομένων απο και προς τη ΒΔ.
-Επειδή η λειτουργικότητα των ΒΔ είναι δύσκολο να δοκιμαστεί σε κινητό λόγω του απαραίτητου User Interface, ο καλύτερος τρόπος είναι να γίνει μέσω Unit Testing. Θα πούμε 2 λόγιο για το Unit Testing στη συνέχεια.
+Our codebase will change a lot, as we will add classes that are related with the DB. 
 
-Οι μονάδες που θα προστεθούν στο σύστημα φαίνονται στην παρακάτω εικόνα:
+- At first we'll define the tables of the DB
+- Second, we'll write code to create these tables through java
+- Next, we'll make test insertions and selections on the DB
+
+We will do all these through Testing files for easier code management
+
+
+New modules are depicted here:
 
 ![](https://github.com/UomMobileDevelopment/Lesson06-material/blob/master/sunshine-db-overview.png)
 
