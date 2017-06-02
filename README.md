@@ -16,25 +16,28 @@ New modules are depicted here:
 ![](https://github.com/UomMobileDevelopment/Lesson06-material/blob/master/sunshine-db-overview.png)
 
 
-## Data Storage in Android - Αποθήκευση δεδομένων
+## Data Storage in Android
 
-Για την αποθήκευση δεδομένων το Android μας παρέχει 2 βασικούς πυλώνες:
+For data storage, Android gives us 2 ways:
 
-1. Το σύστημα αρχείων (File Storage) πχ εκεί αποθηκεύονται τα Shared Preferences 
-2. Μια μίνι-έκδοση βάσης δεδομένων που λέγεται SQLite
+1. **File Storage**  
+2. **SQLite** which is a mini DB
 
-Φυσικά το 2ο είναι πολύ πιο πολύπλοκο στην υλοποίηση, αλλά παρέχει σαφή και αποδοτική οργάνωση δεδομένων (+γρηγορη αναζήτηση)
+Of course the second solution (DB) is more complicated, but it provides better data management and faster retrieval
 
 ![](https://github.com/UomMobileDevelopment/Lesson06-material/blob/master/sql-demo.PNG)
 
 
-Με τη χρήση του SQLite μέσα απο τον κώδικα μπορούμε εύκολα να δημιουργήσουμε πίνακες, να εισάγουμε και να διαγράψουμε δεδομένα. 
+We can use SQLite by writing simple java and create tables, read and insert values. 
 
-### Αλλαγές Sunshine
+### Changes in Sunshine
 
-Ξεκινάμε την εισαγωγή του WeatherContract [(DBContract)](https://developer.android.com/reference/android/provider/ContactsContract.html)
+We start by inserting the  WeatherContract 
 
-Πρόκειται για τη διασύνδεση των πινάκων με τον κώδικα. Μια κλάση contract περιλαμβάνει έναν σύνολο static final Strings καθένα απο τα οποία περιγράφει το όνομα ενός πίνακα και της μιας στήλης στη ΒΔ
+[(DBContract)](https://developer.android.com/reference/android/provider/ContactsContract.html)
+
+
+WeatherContract is actually the connection of our code base with the DB Tables. It contains a set of static final Strings, each of them describing the name of a Table and a column of the DB
 
 ![](https://github.com/UomMobileDevelopment/Lesson06-material/blob/master/db-contract.PNG)
 
