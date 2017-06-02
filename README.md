@@ -64,42 +64,39 @@ public class WeatherContract {
  }
 ```
 
-Για να αποφασίσουμε τι δεδομένα πρέπει να κρατήσουμε, μελετούμε το wireframe για την πρόβλεψη μιας ημέρας:
-
 ![](https://github.com/UomMobileDevelopment/Lesson06-material/blob/master/sunshine-weather-wireframe.png)
 
-αποφασίζουμε λοιπόν πως το πίνακας ``weather`` πρέπει να έχει τα εξής πεδία:
+We decide that the ``weather`` table should contain the following fields:
 
 - Record ID
 - Weather Condition ID 
 - Min Temp
 - Max Temp
-- Wind speed
 - Humidity
 - Date
-- Wind direction
-- Pressure
 
-### Κατανόηση Foreign Key και έννοιας ακεραιότητας αναφορών
 
-Ο Weather Location θα πρέπει επίσης να περιλαμβάνει και την πληροφορία της τοποθεσίας
+### Understanding the Foreign Key and Referential integrity
+
+The weather condition should also contain info about the respective location
 
 ![](https://github.com/UomMobileDevelopment/Lesson06-material/blob/master/weather-location-key-foreign-key.PNG)
 
-__Info: Επεξήγηση ακεραιότητας αναφορών__
+__Info: Understanding Referential  Integrity__
 
-### Επεξήγηση κλάσεων του πακέτου data (Weather Contract, WeatherDbHelper) 
+### Explaining classes of data package (Weather Contract, WeatherDbHelper) 
 
-Τί χρειάζονται αυτές οι κλάσεις; 
+Why do we need these classes? 
 
 ### Tests and Unit testing in general
-Επειδή η λειτουργικότητα των ΒΔ είναι δύσκολο να δοκιμαστεί σε κινητό λόγω του απαραίτητου User Interface, ο καλύτερος τρόπος είναι να γίνει μέσω Unit Testing.
 
-Με τα Unit Tests εκτελείται δοκιμαστικά ο κώδικας με σκοπό να επαληθευτεί η σωστή του λειτουργία. Αφού εκτελεστεί ένα κομμάτι κώδικα (συνήθως το σπάμε σε μεθόδους) ελέγχεται αν η τιμή μιας μεταβλητής είναι η αναμενόμενη, αν ένας πίνακας είναι γεμάτος ή άδειος κ.ο.κ.
+Because it is difficult to test the DB functionality in an Android App mobile interface, it is considered better practice to do this testing through Unit Testing Classes
 
-Οι έλεγχοι αυτοί γίνονται με βοήθεια της μεθόδου assert().
+With Unit Tests we run test code in order to validate the expected app behaviour. 
 
-Παράδειγμα:
+The validation happens by using the method assert().
+
+For example:
 
 ```
 public void testThatDemonstratesAssertions() throws Throwable {
@@ -120,22 +117,21 @@ public void testThatDemonstratesAssertions() throws Throwable {
 
 ```
 
-Διαβάστε περισσότερα για το Unit Testing στο [Tutorials Point](https://www.tutorialspoint.com/software_testing_dictionary/unit_testing.htm)
+Read more at [Tutorials Point](https://www.tutorialspoint.com/software_testing_dictionary/unit_testing.htm)
 
-Οι βασικές κλάσεις στις οποίες θα υλοποιήσουμε τα δικά μας Unit tests είναι οι κλάσεις: TestPractice και FullTestSuite
+We will implement 2 Test classes: TestPractice και FullTestSuite
 
 
-### Άσκηση 1. Δημιουργία Sunshine ΒΔ πίνακα Location
+### Exersice 1. Create Sunshine DB table  ```Location```
 
 Hint:
-* Στην κλάση TestDb βγάζουμε απο σχόλια τη μέθοδο: testCreateDb() 
-και στην κλάση TestUtilities τις μεθόδους createNorthPoleLocationValues() 
-insertNorthPoleLocationValues() *
+* At class ```TestDb``` remove comments from the method: testCreateDb() 
+and in class ```TestUtilities``` methods ```createNorthPoleLocationValues() and insertNorthPoleLocationValues()``` *
 
 
-### Άσκηση 2. Εισαγωγή και ανάγνωση Location και weather data απο τους πίνακες Location και Weather αντιστοιχα
+### Exersice 2. Insert and read the Location and weather data from the Tables Location and Weather respectively
 
-κλάση TestDb μέθοδος testLocationTable 
+class TestDb method testLocationTable 
 
 ```
 public void testLocationTable() {
@@ -192,7 +188,7 @@ public void testLocationTable() {
     }
 ```
 
-μέθοδος testWeatherTable() --->>> Ασκηση!!!
+method testWeatherTable() --->>> Homework !!!
 
 ```
 public void testWeatherTable() {
